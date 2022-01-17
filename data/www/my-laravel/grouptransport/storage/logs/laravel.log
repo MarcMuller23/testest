@@ -1,0 +1,442 @@
+[2022-01-12 12:56:06] local.ERROR: SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'participants' already exists (SQL: create table `participants` (`id` bigint unsigned not null auto_increment primary key, `created_at` timestamp null, `updated_at` timestamp null) default character set utf8mb4 collate 'utf8mb4_unicode_ci') {"exception":"[object] (Illuminate\\Database\\QueryException(code: 42S01): SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'participants' already exists (SQL: create table `participants` (`id` bigint unsigned not null auto_increment primary key, `created_at` timestamp null, `updated_at` timestamp null) default character set utf8mb4 collate 'utf8mb4_unicode_ci') at /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Database/Connection.php:705)
+[stacktrace]
+#0 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Database/Connection.php(665): Illuminate\\Database\\Connection->runQueryCallback('create table `p...', Array, Object(Closure))
+#1 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Database/Connection.php(495): Illuminate\\Database\\Connection->run('create table `p...', Array, Object(Closure))
+#2 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Database/Schema/Blueprint.php(109): Illuminate\\Database\\Connection->statement('create table `p...')
+#3 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(363): Illuminate\\Database\\Schema\\Blueprint->build(Object(Illuminate\\Database\\MySqlConnection), Object(Illuminate\\Database\\Schema\\Grammars\\MySqlGrammar))
+#4 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(226): Illuminate\\Database\\Schema\\Builder->build(Object(Illuminate\\Database\\Schema\\Blueprint))
+#5 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(261): Illuminate\\Database\\Schema\\Builder->create('participants', Object(Closure))
+#6 /shared/httpd/my-laravel/grouptransport/database/migrations/2022_01_12_125252_create_participants_table.php(19): Illuminate\\Support\\Facades\\Facade::__callStatic('create', Array)
+#7 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(394): CreateParticipantsTable->up()
+#8 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(403): Illuminate\\Database\\Migrations\\Migrator->Illuminate\\Database\\Migrations\\{closure}()
+#9 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(202): Illuminate\\Database\\Migrations\\Migrator->runMigration(Object(CreateParticipantsTable), 'up')
+#10 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(167): Illuminate\\Database\\Migrations\\Migrator->runUp('/shared/httpd/m...', 1, false)
+#11 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(112): Illuminate\\Database\\Migrations\\Migrator->runPending(Array, Array)
+#12 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(85): Illuminate\\Database\\Migrations\\Migrator->run(Array, Array)
+#13 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(585): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->Illuminate\\Database\\Console\\Migrations\\{closure}()
+#14 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(94): Illuminate\\Database\\Migrations\\Migrator->usingConnection(NULL, Object(Closure))
+#15 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#16 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Container/Util.php(40): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#17 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#18 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#19 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Container/Container.php(653): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#20 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Console/Command.php(136): Illuminate\\Container\\Container->call(Array)
+#21 /shared/httpd/my-laravel/grouptransport/vendor/symfony/console/Command/Command.php(298): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#22 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Console/Command.php(121): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#23 /shared/httpd/my-laravel/grouptransport/vendor/symfony/console/Application.php(1005): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#24 /shared/httpd/my-laravel/grouptransport/vendor/symfony/console/Application.php(299): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\MigrateCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#25 /shared/httpd/my-laravel/grouptransport/vendor/symfony/console/Application.php(171): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#26 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Console/Application.php(94): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#27 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(129): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#28 /shared/httpd/my-laravel/grouptransport/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#29 {main}
+
+[previous exception] [object] (PDOException(code: 42S01): SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'participants' already exists at /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Database/Connection.php:494)
+[stacktrace]
+#0 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Database/Connection.php(494): PDOStatement->execute()
+#1 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Database/Connection.php(698): Illuminate\\Database\\Connection->Illuminate\\Database\\{closure}('create table `p...', Array)
+#2 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Database/Connection.php(665): Illuminate\\Database\\Connection->runQueryCallback('create table `p...', Array, Object(Closure))
+#3 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Database/Connection.php(495): Illuminate\\Database\\Connection->run('create table `p...', Array, Object(Closure))
+#4 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Database/Schema/Blueprint.php(109): Illuminate\\Database\\Connection->statement('create table `p...')
+#5 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(363): Illuminate\\Database\\Schema\\Blueprint->build(Object(Illuminate\\Database\\MySqlConnection), Object(Illuminate\\Database\\Schema\\Grammars\\MySqlGrammar))
+#6 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(226): Illuminate\\Database\\Schema\\Builder->build(Object(Illuminate\\Database\\Schema\\Blueprint))
+#7 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(261): Illuminate\\Database\\Schema\\Builder->create('participants', Object(Closure))
+#8 /shared/httpd/my-laravel/grouptransport/database/migrations/2022_01_12_125252_create_participants_table.php(19): Illuminate\\Support\\Facades\\Facade::__callStatic('create', Array)
+#9 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(394): CreateParticipantsTable->up()
+#10 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(403): Illuminate\\Database\\Migrations\\Migrator->Illuminate\\Database\\Migrations\\{closure}()
+#11 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(202): Illuminate\\Database\\Migrations\\Migrator->runMigration(Object(CreateParticipantsTable), 'up')
+#12 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(167): Illuminate\\Database\\Migrations\\Migrator->runUp('/shared/httpd/m...', 1, false)
+#13 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(112): Illuminate\\Database\\Migrations\\Migrator->runPending(Array, Array)
+#14 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(85): Illuminate\\Database\\Migrations\\Migrator->run(Array, Array)
+#15 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(585): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->Illuminate\\Database\\Console\\Migrations\\{closure}()
+#16 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(94): Illuminate\\Database\\Migrations\\Migrator->usingConnection(NULL, Object(Closure))
+#17 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#18 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Container/Util.php(40): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#19 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#20 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#21 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Container/Container.php(653): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#22 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Console/Command.php(136): Illuminate\\Container\\Container->call(Array)
+#23 /shared/httpd/my-laravel/grouptransport/vendor/symfony/console/Command/Command.php(298): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#24 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Console/Command.php(121): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#25 /shared/httpd/my-laravel/grouptransport/vendor/symfony/console/Application.php(1005): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#26 /shared/httpd/my-laravel/grouptransport/vendor/symfony/console/Application.php(299): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\MigrateCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#27 /shared/httpd/my-laravel/grouptransport/vendor/symfony/console/Application.php(171): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#28 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Console/Application.php(94): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#29 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(129): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#30 /shared/httpd/my-laravel/grouptransport/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#31 {main}
+"} 
+[2022-01-13 09:31:31] local.ERROR: SQLSTATE[42000]: Syntax error or access violation: 1068 Multiple primary key defined (SQL: alter table `participant_address` add primary key `participant_address_id_primary`(`id`)) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 42000): SQLSTATE[42000]: Syntax error or access violation: 1068 Multiple primary key defined (SQL: alter table `participant_address` add primary key `participant_address_id_primary`(`id`)) at /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Database/Connection.php:705)
+[stacktrace]
+#0 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Database/Connection.php(665): Illuminate\\Database\\Connection->runQueryCallback('alter table `pa...', Array, Object(Closure))
+#1 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Database/Connection.php(495): Illuminate\\Database\\Connection->run('alter table `pa...', Array, Object(Closure))
+#2 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Database/Schema/Blueprint.php(109): Illuminate\\Database\\Connection->statement('alter table `pa...')
+#3 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(363): Illuminate\\Database\\Schema\\Blueprint->build(Object(Illuminate\\Database\\MySqlConnection), Object(Illuminate\\Database\\Schema\\Grammars\\MySqlGrammar))
+#4 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(226): Illuminate\\Database\\Schema\\Builder->build(Object(Illuminate\\Database\\Schema\\Blueprint))
+#5 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(261): Illuminate\\Database\\Schema\\Builder->create('participant_add...', Object(Closure))
+#6 /shared/httpd/my-laravel/grouptransport/database/migrations/2022_01_12_125731_create_participant_address_table.php(34): Illuminate\\Support\\Facades\\Facade::__callStatic('create', Array)
+#7 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(394): CreateParticipantAddressTable->up()
+#8 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(403): Illuminate\\Database\\Migrations\\Migrator->Illuminate\\Database\\Migrations\\{closure}()
+#9 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(202): Illuminate\\Database\\Migrations\\Migrator->runMigration(Object(CreateParticipantAddressTable), 'up')
+#10 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(167): Illuminate\\Database\\Migrations\\Migrator->runUp('/shared/httpd/m...', 2, false)
+#11 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(112): Illuminate\\Database\\Migrations\\Migrator->runPending(Array, Array)
+#12 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(85): Illuminate\\Database\\Migrations\\Migrator->run(Array, Array)
+#13 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(585): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->Illuminate\\Database\\Console\\Migrations\\{closure}()
+#14 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(94): Illuminate\\Database\\Migrations\\Migrator->usingConnection(NULL, Object(Closure))
+#15 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#16 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Container/Util.php(40): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#17 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#18 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#19 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Container/Container.php(653): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#20 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Console/Command.php(136): Illuminate\\Container\\Container->call(Array)
+#21 /shared/httpd/my-laravel/grouptransport/vendor/symfony/console/Command/Command.php(298): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#22 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Console/Command.php(121): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#23 /shared/httpd/my-laravel/grouptransport/vendor/symfony/console/Application.php(1005): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#24 /shared/httpd/my-laravel/grouptransport/vendor/symfony/console/Application.php(299): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\MigrateCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#25 /shared/httpd/my-laravel/grouptransport/vendor/symfony/console/Application.php(171): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#26 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Console/Application.php(94): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#27 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(129): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#28 /shared/httpd/my-laravel/grouptransport/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#29 {main}
+
+[previous exception] [object] (PDOException(code: 42000): SQLSTATE[42000]: Syntax error or access violation: 1068 Multiple primary key defined at /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Database/Connection.php:494)
+[stacktrace]
+#0 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Database/Connection.php(494): PDOStatement->execute()
+#1 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Database/Connection.php(698): Illuminate\\Database\\Connection->Illuminate\\Database\\{closure}('alter table `pa...', Array)
+#2 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Database/Connection.php(665): Illuminate\\Database\\Connection->runQueryCallback('alter table `pa...', Array, Object(Closure))
+#3 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Database/Connection.php(495): Illuminate\\Database\\Connection->run('alter table `pa...', Array, Object(Closure))
+#4 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Database/Schema/Blueprint.php(109): Illuminate\\Database\\Connection->statement('alter table `pa...')
+#5 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(363): Illuminate\\Database\\Schema\\Blueprint->build(Object(Illuminate\\Database\\MySqlConnection), Object(Illuminate\\Database\\Schema\\Grammars\\MySqlGrammar))
+#6 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(226): Illuminate\\Database\\Schema\\Builder->build(Object(Illuminate\\Database\\Schema\\Blueprint))
+#7 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(261): Illuminate\\Database\\Schema\\Builder->create('participant_add...', Object(Closure))
+#8 /shared/httpd/my-laravel/grouptransport/database/migrations/2022_01_12_125731_create_participant_address_table.php(34): Illuminate\\Support\\Facades\\Facade::__callStatic('create', Array)
+#9 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(394): CreateParticipantAddressTable->up()
+#10 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(403): Illuminate\\Database\\Migrations\\Migrator->Illuminate\\Database\\Migrations\\{closure}()
+#11 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(202): Illuminate\\Database\\Migrations\\Migrator->runMigration(Object(CreateParticipantAddressTable), 'up')
+#12 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(167): Illuminate\\Database\\Migrations\\Migrator->runUp('/shared/httpd/m...', 2, false)
+#13 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(112): Illuminate\\Database\\Migrations\\Migrator->runPending(Array, Array)
+#14 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(85): Illuminate\\Database\\Migrations\\Migrator->run(Array, Array)
+#15 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(585): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->Illuminate\\Database\\Console\\Migrations\\{closure}()
+#16 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(94): Illuminate\\Database\\Migrations\\Migrator->usingConnection(NULL, Object(Closure))
+#17 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#18 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Container/Util.php(40): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#19 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#20 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#21 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Container/Container.php(653): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#22 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Console/Command.php(136): Illuminate\\Container\\Container->call(Array)
+#23 /shared/httpd/my-laravel/grouptransport/vendor/symfony/console/Command/Command.php(298): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#24 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Console/Command.php(121): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#25 /shared/httpd/my-laravel/grouptransport/vendor/symfony/console/Application.php(1005): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#26 /shared/httpd/my-laravel/grouptransport/vendor/symfony/console/Application.php(299): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\MigrateCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#27 /shared/httpd/my-laravel/grouptransport/vendor/symfony/console/Application.php(171): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#28 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Console/Application.php(94): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#29 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(129): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#30 /shared/httpd/my-laravel/grouptransport/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#31 {main}
+"} 
+[2022-01-13 09:32:43] local.ERROR: SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'participant_address' already exists (SQL: create table `participant_address` (`id` bigint unsigned not null auto_increment primary key, `participantId` varchar(255) not null, `addressId` varchar(255) not null, `marge` int not null, `maxTravelTime` int not null, `startDate` date not null, `endDate` date not null, `monday` tinyint not null, `tuesday` tinyint not null, `wednesday` tinyint not null, `thursday` tinyint not null, `friday` tinyint not null, `saturday` tinyint not null, `sunday` tinyint not null, `active` tinyint not null, `created_at` datetime not null, `updated_at` datetime not null) default character set utf8mb4 collate 'utf8mb4_unicode_ci') {"exception":"[object] (Illuminate\\Database\\QueryException(code: 42S01): SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'participant_address' already exists (SQL: create table `participant_address` (`id` bigint unsigned not null auto_increment primary key, `participantId` varchar(255) not null, `addressId` varchar(255) not null, `marge` int not null, `maxTravelTime` int not null, `startDate` date not null, `endDate` date not null, `monday` tinyint not null, `tuesday` tinyint not null, `wednesday` tinyint not null, `thursday` tinyint not null, `friday` tinyint not null, `saturday` tinyint not null, `sunday` tinyint not null, `active` tinyint not null, `created_at` datetime not null, `updated_at` datetime not null) default character set utf8mb4 collate 'utf8mb4_unicode_ci') at /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Database/Connection.php:705)
+[stacktrace]
+#0 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Database/Connection.php(665): Illuminate\\Database\\Connection->runQueryCallback('create table `p...', Array, Object(Closure))
+#1 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Database/Connection.php(495): Illuminate\\Database\\Connection->run('create table `p...', Array, Object(Closure))
+#2 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Database/Schema/Blueprint.php(109): Illuminate\\Database\\Connection->statement('create table `p...')
+#3 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(363): Illuminate\\Database\\Schema\\Blueprint->build(Object(Illuminate\\Database\\MySqlConnection), Object(Illuminate\\Database\\Schema\\Grammars\\MySqlGrammar))
+#4 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(226): Illuminate\\Database\\Schema\\Builder->build(Object(Illuminate\\Database\\Schema\\Blueprint))
+#5 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(261): Illuminate\\Database\\Schema\\Builder->create('participant_add...', Object(Closure))
+#6 /shared/httpd/my-laravel/grouptransport/database/migrations/2022_01_12_125731_create_participant_address_table.php(34): Illuminate\\Support\\Facades\\Facade::__callStatic('create', Array)
+#7 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(394): CreateParticipantAddressTable->up()
+#8 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(403): Illuminate\\Database\\Migrations\\Migrator->Illuminate\\Database\\Migrations\\{closure}()
+#9 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(202): Illuminate\\Database\\Migrations\\Migrator->runMigration(Object(CreateParticipantAddressTable), 'up')
+#10 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(167): Illuminate\\Database\\Migrations\\Migrator->runUp('/shared/httpd/m...', 3, false)
+#11 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(112): Illuminate\\Database\\Migrations\\Migrator->runPending(Array, Array)
+#12 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(85): Illuminate\\Database\\Migrations\\Migrator->run(Array, Array)
+#13 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(585): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->Illuminate\\Database\\Console\\Migrations\\{closure}()
+#14 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(94): Illuminate\\Database\\Migrations\\Migrator->usingConnection(NULL, Object(Closure))
+#15 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#16 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Container/Util.php(40): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#17 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#18 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#19 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Container/Container.php(653): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#20 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Console/Command.php(136): Illuminate\\Container\\Container->call(Array)
+#21 /shared/httpd/my-laravel/grouptransport/vendor/symfony/console/Command/Command.php(298): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#22 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Console/Command.php(121): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#23 /shared/httpd/my-laravel/grouptransport/vendor/symfony/console/Application.php(1005): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#24 /shared/httpd/my-laravel/grouptransport/vendor/symfony/console/Application.php(299): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\MigrateCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#25 /shared/httpd/my-laravel/grouptransport/vendor/symfony/console/Application.php(171): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#26 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Console/Application.php(94): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#27 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(129): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#28 /shared/httpd/my-laravel/grouptransport/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#29 {main}
+
+[previous exception] [object] (PDOException(code: 42S01): SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'participant_address' already exists at /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Database/Connection.php:494)
+[stacktrace]
+#0 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Database/Connection.php(494): PDOStatement->execute()
+#1 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Database/Connection.php(698): Illuminate\\Database\\Connection->Illuminate\\Database\\{closure}('create table `p...', Array)
+#2 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Database/Connection.php(665): Illuminate\\Database\\Connection->runQueryCallback('create table `p...', Array, Object(Closure))
+#3 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Database/Connection.php(495): Illuminate\\Database\\Connection->run('create table `p...', Array, Object(Closure))
+#4 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Database/Schema/Blueprint.php(109): Illuminate\\Database\\Connection->statement('create table `p...')
+#5 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(363): Illuminate\\Database\\Schema\\Blueprint->build(Object(Illuminate\\Database\\MySqlConnection), Object(Illuminate\\Database\\Schema\\Grammars\\MySqlGrammar))
+#6 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(226): Illuminate\\Database\\Schema\\Builder->build(Object(Illuminate\\Database\\Schema\\Blueprint))
+#7 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(261): Illuminate\\Database\\Schema\\Builder->create('participant_add...', Object(Closure))
+#8 /shared/httpd/my-laravel/grouptransport/database/migrations/2022_01_12_125731_create_participant_address_table.php(34): Illuminate\\Support\\Facades\\Facade::__callStatic('create', Array)
+#9 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(394): CreateParticipantAddressTable->up()
+#10 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(403): Illuminate\\Database\\Migrations\\Migrator->Illuminate\\Database\\Migrations\\{closure}()
+#11 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(202): Illuminate\\Database\\Migrations\\Migrator->runMigration(Object(CreateParticipantAddressTable), 'up')
+#12 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(167): Illuminate\\Database\\Migrations\\Migrator->runUp('/shared/httpd/m...', 3, false)
+#13 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(112): Illuminate\\Database\\Migrations\\Migrator->runPending(Array, Array)
+#14 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(85): Illuminate\\Database\\Migrations\\Migrator->run(Array, Array)
+#15 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(585): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->Illuminate\\Database\\Console\\Migrations\\{closure}()
+#16 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(94): Illuminate\\Database\\Migrations\\Migrator->usingConnection(NULL, Object(Closure))
+#17 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#18 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Container/Util.php(40): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#19 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#20 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#21 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Container/Container.php(653): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#22 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Console/Command.php(136): Illuminate\\Container\\Container->call(Array)
+#23 /shared/httpd/my-laravel/grouptransport/vendor/symfony/console/Command/Command.php(298): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#24 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Console/Command.php(121): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#25 /shared/httpd/my-laravel/grouptransport/vendor/symfony/console/Application.php(1005): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#26 /shared/httpd/my-laravel/grouptransport/vendor/symfony/console/Application.php(299): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\MigrateCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#27 /shared/httpd/my-laravel/grouptransport/vendor/symfony/console/Application.php(171): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#28 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Console/Application.php(94): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#29 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(129): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#30 /shared/httpd/my-laravel/grouptransport/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#31 {main}
+"} 
+[2022-01-13 09:32:55] local.ERROR: Command "dresh" is not defined. {"exception":"[object] (Symfony\\Component\\Console\\Exception\\CommandNotFoundException(code: 0): Command \"dresh\" is not defined. at /shared/httpd/my-laravel/grouptransport/vendor/symfony/console/Application.php:709)
+[stacktrace]
+#0 /shared/httpd/my-laravel/grouptransport/vendor/symfony/console/Application.php(259): Symfony\\Component\\Console\\Application->find('dresh')
+#1 /shared/httpd/my-laravel/grouptransport/vendor/symfony/console/Application.php(171): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#2 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Console/Application.php(94): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#3 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(129): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#4 /shared/httpd/my-laravel/grouptransport/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#5 {main}
+"} 
+[2022-01-13 09:32:58] local.ERROR: Command "fresh" is not defined.
+
+Did you mean one of these?
+    migrate:fresh
+    migrate:refresh {"exception":"[object] (Symfony\\Component\\Console\\Exception\\CommandNotFoundException(code: 0): Command \"fresh\" is not defined.
+
+Did you mean one of these?
+    migrate:fresh
+    migrate:refresh at /shared/httpd/my-laravel/grouptransport/vendor/symfony/console/Application.php:709)
+[stacktrace]
+#0 /shared/httpd/my-laravel/grouptransport/vendor/symfony/console/Application.php(259): Symfony\\Component\\Console\\Application->find('fresh')
+#1 /shared/httpd/my-laravel/grouptransport/vendor/symfony/console/Application.php(171): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#2 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Console/Application.php(94): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#3 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(129): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#4 /shared/httpd/my-laravel/grouptransport/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#5 {main}
+"} 
+[2022-01-13 09:33:11] local.ERROR: SQLSTATE[42000]: Syntax error or access violation: 1068 Multiple primary key defined (SQL: alter table `participant_indications` add primary key `participant_indications_id_primary`(`id`)) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 42000): SQLSTATE[42000]: Syntax error or access violation: 1068 Multiple primary key defined (SQL: alter table `participant_indications` add primary key `participant_indications_id_primary`(`id`)) at /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Database/Connection.php:705)
+[stacktrace]
+#0 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Database/Connection.php(665): Illuminate\\Database\\Connection->runQueryCallback('alter table `pa...', Array, Object(Closure))
+#1 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Database/Connection.php(495): Illuminate\\Database\\Connection->run('alter table `pa...', Array, Object(Closure))
+#2 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Database/Schema/Blueprint.php(109): Illuminate\\Database\\Connection->statement('alter table `pa...')
+#3 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(363): Illuminate\\Database\\Schema\\Blueprint->build(Object(Illuminate\\Database\\MySqlConnection), Object(Illuminate\\Database\\Schema\\Grammars\\MySqlGrammar))
+#4 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(226): Illuminate\\Database\\Schema\\Builder->build(Object(Illuminate\\Database\\Schema\\Blueprint))
+#5 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(261): Illuminate\\Database\\Schema\\Builder->create('participant_ind...', Object(Closure))
+#6 /shared/httpd/my-laravel/grouptransport/database/migrations/2022_01_12_125816_create_participant_indications_table.php(23): Illuminate\\Support\\Facades\\Facade::__callStatic('create', Array)
+#7 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(394): CreateParticipantIndicationsTable->up()
+#8 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(403): Illuminate\\Database\\Migrations\\Migrator->Illuminate\\Database\\Migrations\\{closure}()
+#9 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(202): Illuminate\\Database\\Migrations\\Migrator->runMigration(Object(CreateParticipantIndicationsTable), 'up')
+#10 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(167): Illuminate\\Database\\Migrations\\Migrator->runUp('/shared/httpd/m...', 1, false)
+#11 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(112): Illuminate\\Database\\Migrations\\Migrator->runPending(Array, Array)
+#12 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(85): Illuminate\\Database\\Migrations\\Migrator->run(Array, Array)
+#13 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(585): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->Illuminate\\Database\\Console\\Migrations\\{closure}()
+#14 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(94): Illuminate\\Database\\Migrations\\Migrator->usingConnection(NULL, Object(Closure))
+#15 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#16 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Container/Util.php(40): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#17 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#18 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#19 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Container/Container.php(653): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#20 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Console/Command.php(136): Illuminate\\Container\\Container->call(Array)
+#21 /shared/httpd/my-laravel/grouptransport/vendor/symfony/console/Command/Command.php(298): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArrayInput), Object(Illuminate\\Console\\OutputStyle))
+#22 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Console/Command.php(121): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArrayInput), Object(Illuminate\\Console\\OutputStyle))
+#23 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Console/Concerns/CallsCommands.php(68): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArrayInput), Object(Illuminate\\Console\\OutputStyle))
+#24 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Console/Concerns/CallsCommands.php(28): Illuminate\\Console\\Command->runCommand('migrate', Array, Object(Illuminate\\Console\\OutputStyle))
+#25 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/FreshCommand.php(55): Illuminate\\Console\\Command->call('migrate', Array)
+#26 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate\\Database\\Console\\Migrations\\FreshCommand->handle()
+#27 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Container/Util.php(40): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#28 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#29 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#30 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Container/Container.php(653): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#31 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Console/Command.php(136): Illuminate\\Container\\Container->call(Array)
+#32 /shared/httpd/my-laravel/grouptransport/vendor/symfony/console/Command/Command.php(298): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#33 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Console/Command.php(121): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#34 /shared/httpd/my-laravel/grouptransport/vendor/symfony/console/Application.php(1005): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#35 /shared/httpd/my-laravel/grouptransport/vendor/symfony/console/Application.php(299): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\FreshCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#36 /shared/httpd/my-laravel/grouptransport/vendor/symfony/console/Application.php(171): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#37 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Console/Application.php(94): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#38 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(129): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#39 /shared/httpd/my-laravel/grouptransport/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#40 {main}
+
+[previous exception] [object] (PDOException(code: 42000): SQLSTATE[42000]: Syntax error or access violation: 1068 Multiple primary key defined at /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Database/Connection.php:494)
+[stacktrace]
+#0 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Database/Connection.php(494): PDOStatement->execute()
+#1 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Database/Connection.php(698): Illuminate\\Database\\Connection->Illuminate\\Database\\{closure}('alter table `pa...', Array)
+#2 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Database/Connection.php(665): Illuminate\\Database\\Connection->runQueryCallback('alter table `pa...', Array, Object(Closure))
+#3 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Database/Connection.php(495): Illuminate\\Database\\Connection->run('alter table `pa...', Array, Object(Closure))
+#4 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Database/Schema/Blueprint.php(109): Illuminate\\Database\\Connection->statement('alter table `pa...')
+#5 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(363): Illuminate\\Database\\Schema\\Blueprint->build(Object(Illuminate\\Database\\MySqlConnection), Object(Illuminate\\Database\\Schema\\Grammars\\MySqlGrammar))
+#6 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(226): Illuminate\\Database\\Schema\\Builder->build(Object(Illuminate\\Database\\Schema\\Blueprint))
+#7 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(261): Illuminate\\Database\\Schema\\Builder->create('participant_ind...', Object(Closure))
+#8 /shared/httpd/my-laravel/grouptransport/database/migrations/2022_01_12_125816_create_participant_indications_table.php(23): Illuminate\\Support\\Facades\\Facade::__callStatic('create', Array)
+#9 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(394): CreateParticipantIndicationsTable->up()
+#10 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(403): Illuminate\\Database\\Migrations\\Migrator->Illuminate\\Database\\Migrations\\{closure}()
+#11 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(202): Illuminate\\Database\\Migrations\\Migrator->runMigration(Object(CreateParticipantIndicationsTable), 'up')
+#12 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(167): Illuminate\\Database\\Migrations\\Migrator->runUp('/shared/httpd/m...', 1, false)
+#13 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(112): Illuminate\\Database\\Migrations\\Migrator->runPending(Array, Array)
+#14 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(85): Illuminate\\Database\\Migrations\\Migrator->run(Array, Array)
+#15 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(585): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->Illuminate\\Database\\Console\\Migrations\\{closure}()
+#16 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(94): Illuminate\\Database\\Migrations\\Migrator->usingConnection(NULL, Object(Closure))
+#17 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#18 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Container/Util.php(40): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#19 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#20 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#21 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Container/Container.php(653): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#22 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Console/Command.php(136): Illuminate\\Container\\Container->call(Array)
+#23 /shared/httpd/my-laravel/grouptransport/vendor/symfony/console/Command/Command.php(298): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArrayInput), Object(Illuminate\\Console\\OutputStyle))
+#24 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Console/Command.php(121): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArrayInput), Object(Illuminate\\Console\\OutputStyle))
+#25 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Console/Concerns/CallsCommands.php(68): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArrayInput), Object(Illuminate\\Console\\OutputStyle))
+#26 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Console/Concerns/CallsCommands.php(28): Illuminate\\Console\\Command->runCommand('migrate', Array, Object(Illuminate\\Console\\OutputStyle))
+#27 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/FreshCommand.php(55): Illuminate\\Console\\Command->call('migrate', Array)
+#28 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate\\Database\\Console\\Migrations\\FreshCommand->handle()
+#29 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Container/Util.php(40): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#30 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#31 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#32 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Container/Container.php(653): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#33 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Console/Command.php(136): Illuminate\\Container\\Container->call(Array)
+#34 /shared/httpd/my-laravel/grouptransport/vendor/symfony/console/Command/Command.php(298): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#35 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Console/Command.php(121): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#36 /shared/httpd/my-laravel/grouptransport/vendor/symfony/console/Application.php(1005): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#37 /shared/httpd/my-laravel/grouptransport/vendor/symfony/console/Application.php(299): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\FreshCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#38 /shared/httpd/my-laravel/grouptransport/vendor/symfony/console/Application.php(171): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#39 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Console/Application.php(94): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#40 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(129): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#41 /shared/httpd/my-laravel/grouptransport/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#42 {main}
+"} 
+[2022-01-13 09:34:48] local.ERROR: Command "make:controler" is not defined.
+
+Did you mean one of these?
+    make:cast
+    make:channel
+    make:command
+    make:component
+    make:controller
+    make:event
+    make:exception
+    make:factory
+    make:job
+    make:listener
+    make:mail
+    make:middleware
+    make:migration
+    make:model
+    make:notification
+    make:observer
+    make:policy
+    make:provider
+    make:request
+    make:resource
+    make:rule
+    make:seeder
+    make:test {"exception":"[object] (Symfony\\Component\\Console\\Exception\\CommandNotFoundException(code: 0): Command \"make:controler\" is not defined.
+
+Did you mean one of these?
+    make:cast
+    make:channel
+    make:command
+    make:component
+    make:controller
+    make:event
+    make:exception
+    make:factory
+    make:job
+    make:listener
+    make:mail
+    make:middleware
+    make:migration
+    make:model
+    make:notification
+    make:observer
+    make:policy
+    make:provider
+    make:request
+    make:resource
+    make:rule
+    make:seeder
+    make:test at /shared/httpd/my-laravel/grouptransport/vendor/symfony/console/Application.php:709)
+[stacktrace]
+#0 /shared/httpd/my-laravel/grouptransport/vendor/symfony/console/Application.php(259): Symfony\\Component\\Console\\Application->find('make:controler')
+#1 /shared/httpd/my-laravel/grouptransport/vendor/symfony/console/Application.php(171): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#2 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Console/Application.php(94): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#3 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(129): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#4 /shared/httpd/my-laravel/grouptransport/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#5 {main}
+"} 
+[2022-01-13 12:02:30] local.ERROR: Unable to detect application namespace. {"exception":"[object] (RuntimeException(code: 0): Unable to detect application namespace. at /home/marcm/Documents/devilbox/data/www/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Foundation/Application.php:1409)
+[stacktrace]
+#0 /home/marcm/Documents/devilbox/data/www/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Console/GeneratorCommand.php(371): Illuminate\\Foundation\\Application->getNamespace()
+#1 /home/marcm/Documents/devilbox/data/www/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Console/GeneratorCommand.php(185): Illuminate\\Console\\GeneratorCommand->rootNamespace()
+#2 /home/marcm/Documents/devilbox/data/www/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Console/GeneratorCommand.php(144): Illuminate\\Console\\GeneratorCommand->qualifyClass()
+#3 /home/marcm/Documents/devilbox/data/www/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate\\Console\\GeneratorCommand->handle()
+#4 /home/marcm/Documents/devilbox/data/www/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Container/Util.php(40): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#5 /home/marcm/Documents/devilbox/data/www/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure()
+#6 /home/marcm/Documents/devilbox/data/www/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#7 /home/marcm/Documents/devilbox/data/www/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Container/Container.php(653): Illuminate\\Container\\BoundMethod::call()
+#8 /home/marcm/Documents/devilbox/data/www/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Console/Command.php(136): Illuminate\\Container\\Container->call()
+#9 /home/marcm/Documents/devilbox/data/www/my-laravel/grouptransport/vendor/symfony/console/Command/Command.php(298): Illuminate\\Console\\Command->execute()
+#10 /home/marcm/Documents/devilbox/data/www/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Console/Command.php(121): Symfony\\Component\\Console\\Command\\Command->run()
+#11 /home/marcm/Documents/devilbox/data/www/my-laravel/grouptransport/vendor/symfony/console/Application.php(1005): Illuminate\\Console\\Command->run()
+#12 /home/marcm/Documents/devilbox/data/www/my-laravel/grouptransport/vendor/symfony/console/Application.php(299): Symfony\\Component\\Console\\Application->doRunCommand()
+#13 /home/marcm/Documents/devilbox/data/www/my-laravel/grouptransport/vendor/symfony/console/Application.php(171): Symfony\\Component\\Console\\Application->doRun()
+#14 /home/marcm/Documents/devilbox/data/www/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Console/Application.php(94): Symfony\\Component\\Console\\Application->run()
+#15 /home/marcm/Documents/devilbox/data/www/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(129): Illuminate\\Console\\Application->run()
+#16 /home/marcm/Documents/devilbox/data/www/my-laravel/grouptransport/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle()
+#17 {main}
+"} 
+[2022-01-13 12:03:16] local.ERROR: Unable to detect application namespace. {"exception":"[object] (RuntimeException(code: 0): Unable to detect application namespace. at /home/marcm/Documents/devilbox/data/www/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Foundation/Application.php:1409)
+[stacktrace]
+#0 /home/marcm/Documents/devilbox/data/www/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Console/GeneratorCommand.php(371): Illuminate\\Foundation\\Application->getNamespace()
+#1 /home/marcm/Documents/devilbox/data/www/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Console/GeneratorCommand.php(185): Illuminate\\Console\\GeneratorCommand->rootNamespace()
+#2 /home/marcm/Documents/devilbox/data/www/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Console/GeneratorCommand.php(144): Illuminate\\Console\\GeneratorCommand->qualifyClass()
+#3 /home/marcm/Documents/devilbox/data/www/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate\\Console\\GeneratorCommand->handle()
+#4 /home/marcm/Documents/devilbox/data/www/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Container/Util.php(40): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#5 /home/marcm/Documents/devilbox/data/www/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure()
+#6 /home/marcm/Documents/devilbox/data/www/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#7 /home/marcm/Documents/devilbox/data/www/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Container/Container.php(653): Illuminate\\Container\\BoundMethod::call()
+#8 /home/marcm/Documents/devilbox/data/www/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Console/Command.php(136): Illuminate\\Container\\Container->call()
+#9 /home/marcm/Documents/devilbox/data/www/my-laravel/grouptransport/vendor/symfony/console/Command/Command.php(298): Illuminate\\Console\\Command->execute()
+#10 /home/marcm/Documents/devilbox/data/www/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Console/Command.php(121): Symfony\\Component\\Console\\Command\\Command->run()
+#11 /home/marcm/Documents/devilbox/data/www/my-laravel/grouptransport/vendor/symfony/console/Application.php(1005): Illuminate\\Console\\Command->run()
+#12 /home/marcm/Documents/devilbox/data/www/my-laravel/grouptransport/vendor/symfony/console/Application.php(299): Symfony\\Component\\Console\\Application->doRunCommand()
+#13 /home/marcm/Documents/devilbox/data/www/my-laravel/grouptransport/vendor/symfony/console/Application.php(171): Symfony\\Component\\Console\\Application->doRun()
+#14 /home/marcm/Documents/devilbox/data/www/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Console/Application.php(94): Symfony\\Component\\Console\\Application->run()
+#15 /home/marcm/Documents/devilbox/data/www/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(129): Illuminate\\Console\\Application->run()
+#16 /home/marcm/Documents/devilbox/data/www/my-laravel/grouptransport/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle()
+#17 {main}
+"} 
+[2022-01-13 12:04:52] local.ERROR: Unable to detect application namespace. {"exception":"[object] (RuntimeException(code: 0): Unable to detect application namespace. at /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Foundation/Application.php:1409)
+[stacktrace]
+#0 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Console/GeneratorCommand.php(371): Illuminate\\Foundation\\Application->getNamespace()
+#1 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Console/GeneratorCommand.php(185): Illuminate\\Console\\GeneratorCommand->rootNamespace()
+#2 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Console/GeneratorCommand.php(144): Illuminate\\Console\\GeneratorCommand->qualifyClass('groupController')
+#3 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate\\Console\\GeneratorCommand->handle()
+#4 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Container/Util.php(40): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#5 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#6 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#7 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Container/Container.php(653): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#8 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Console/Command.php(136): Illuminate\\Container\\Container->call(Array)
+#9 /shared/httpd/my-laravel/grouptransport/vendor/symfony/console/Command/Command.php(298): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#10 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Console/Command.php(121): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#11 /shared/httpd/my-laravel/grouptransport/vendor/symfony/console/Application.php(1005): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#12 /shared/httpd/my-laravel/grouptransport/vendor/symfony/console/Application.php(299): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Routing\\Console\\ControllerMakeCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#13 /shared/httpd/my-laravel/grouptransport/vendor/symfony/console/Application.php(171): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#14 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Console/Application.php(94): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#15 /shared/httpd/my-laravel/grouptransport/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(129): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#16 /shared/httpd/my-laravel/grouptransport/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#17 {main}
+"} 
